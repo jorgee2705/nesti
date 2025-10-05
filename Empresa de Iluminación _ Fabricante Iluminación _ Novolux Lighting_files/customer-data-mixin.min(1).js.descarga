@@ -1,0 +1,2 @@
+define(['mage/utils/wrapper','jquery',],function(wrapper,$){'use strict';return function(customerData){customerData.init=wrapper.wrapSuper(customerData.init,function(){const storageCustomerData=$.initNamespaceStorage('mage-cache-storage').localStorage.get('customer');if(!storageCustomerData){customerData.reload(['customer'],false);}
+this._super()});return customerData;};});
